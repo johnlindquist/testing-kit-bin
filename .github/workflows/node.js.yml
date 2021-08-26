@@ -25,12 +25,15 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-      env:
-          KIT: $PWD/node_modules/kit
-          KENV: $PWD
+        cache: 'npm'      
     - run: npm ci
     - run: echo $PWD
     - run: echo $KIT
+      env:
+        KIT: $PWD/node_modules/kit
+        KENV: $PWD
     - run: ls
     - run: npx kit ./scripts/testing.js
+      env:
+        KIT: $PWD/node_modules/kit
+        KENV: $PWD
