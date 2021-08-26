@@ -26,7 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      env:
+          KIT: $PWD/node_modules/kit
+          KENV: $PWD
     - run: npm ci
     - run: echo $PWD
+    - run: echo $KIT
     - run: ls
     - run: npx kit ./scripts/testing.js
