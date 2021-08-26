@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kit": "https://github.com/johnlindquist/kit#alpha"
+    "kit": "https://github.com/johnlindquist/kit#98de70a412bfec99226735ffaca7e23b33555448"
   }
 }
