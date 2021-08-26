@@ -27,4 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: echo $PWD
+    - run: ls
     - run: npx kit ./scripts/testing.js
