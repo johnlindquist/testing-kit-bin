@@ -28,12 +28,5 @@ jobs:
         cache: 'npm'      
     - run: npm ci
     - run: echo $PWD
-    - run: echo $KIT
-      env:
-        KIT: $PWD/node_modules/kit
-        KENV: $PWD
     - run: ls
-    - run: npx kit ./scripts/testing.js
-      env:
-        KIT: $PWD/node_modules/kit
-        KENV: $PWD
+    - run: KIT=$PWD/node_modules/kit KENV=$PWD npx kit ./scripts/testing.js
